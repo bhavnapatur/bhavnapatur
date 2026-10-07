@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISM — Bhavna Patur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">Bhavna Patur</a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="academics.html" class="nav-link">Academics</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="research.html" class="nav-link">Research</a></li>
+          <li><a href="ism.html" class="nav-link active">ISM</a></li>
+        </ul>
+      </nav>
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark theme">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section-padding">
+    <!-- Header Section -->
+    <div class="exp-hero-header">
+      <span class="editorial-label">Professional Mentorship & Research</span>
+      <h1 class="editorial-heading">ISM <em>Program</em></h1>
+      <p class="exp-intro-text">
+        The Independent Study & Mentorship Program at Frisco ISD.
+      </p>
+    </div>
+
+    <!-- Main Editorial Card Block -->
+    <div class="ism-card-wrapper border-top" style="padding-top: 2.5rem;">
+      <article class="ism-card">
+        <div class="ism-card-header">
+          <div>
+            <div class="exp-org-badge">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>Frisco ISD Advanced Academics</span>
+            </div>
+            <h2 class="ism-card-title">Independent Study & Mentorship</h2>
+          </div>
+          
+        </div>
+
+        <div class="ism-body-content">
+          <p>
+            ISM is a selective elective for high-achieving juniors and seniors in Frisco ISD that focuses on real-world experience. To get in, students have to go through a competitive application and interview process.
+            Once in the program, we spend the year conducting deep research and interviewing professionals in our chosen field. The goal is to eventually find a mentor who can provide hands-on guidance and help us gain actual professional experience before we even graduate high school.
+          </p>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-flex">
+      <span>© 2026 Bhavna Patur. All rights reserved.</span>
+      <a href="mailto:paturbhavna@gmail.com" style="border-bottom: 1px solid var(--text-muted);">paturbhavna@gmail.com</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

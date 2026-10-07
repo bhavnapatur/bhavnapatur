@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhavna Patur — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">Bhavna Patur</a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="academics.html" class="nav-link">Academics</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="research.html" class="nav-link active">Research</a></li>
+          <li><a href="ism.html" class="nav-link active">ISM</a></li>
+        </ul>
+      </nav>
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark theme">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section container">
+      <div class="hero-meta">
+        <span class="editorial-label">Digital Portfolio</span>
+        <span class="editorial-label">Frisco, TX</span>
+      </div>
+
+      <!-- Side-by-Side Flex Layout: Headshot + Text -->
+      <div class="hero-content-wrapper">
+        <div class="hero-text-content">
+          <h1 class="hero-title-main">Bhavna Patur</h1>
+          
+          <p class="hero-tagline">
+            Interdisciplinary • Technical • Creative
+          </p>
+
+          <div class="hero-bio">
+            <p style="margin-bottom: 1.25rem;">
+              Hello! I'm <strong>Bhavna Patur</strong>, a junior at Centennial High School with an interdisciplinary passion for wearable technology, computer science, and data science, along with a commitment to making a meaningful difference in the lives of others.
+            </p>
+            <p style="margin-bottom: 1.25rem;">
+              I believe in the power of technical curiosity and creative problem-solving to drive real change, and I'm constantly seeking out challenges that push me to grow both intellectually and personally. I strive to contribute in ways that are purposeful and people-centered, whether engineering AI models, creating accessible hardware, or analyzing complex datasets, always keeping in mind the bigger picture of why the work matters.
+            </p>
+            <p>
+              In my free time, I enjoy writing, tackling chess puzzles, and exploring my creative side through new technology projects.
+            </p>
+          </div>
+        </div>
+
+        <!-- Headshot Image Container -->
+        <div class="hero-image-container">
+          <img src="headshot.jpeg" alt="Bhavna Patur Headshot" class="hero-headshot">
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Works / Featured Projects Overview -->
+    <section class="section-padding border-top">
+      <div class="container">
+        <span class="editorial-label">Curated Index</span>
+        <h2 class="editorial-heading">Featured <em>Projects</em></h2>
+
+        <div class="projects-grid">
+          <!-- Travia AI -->
+          <div class="project-card wide">
+            <div>
+              <div class="project-meta-top">
+                <span>Kode With Klossy AI/ML</span>
+                <span>June 2025</span>
+              </div>
+              <h3 class="project-title">Travia — AI Travel Planner</h3>
+              <p class="project-desc">Engineered and deployed Travia, an AI travel planning platform generating custom itineraries based on user constraints. Built backend model logic in Python and Gradio.</p>
+            </div>
+            <div class="project-tags">
+              <span class="tag-chip">Python</span>
+              <span class="tag-chip">Gradio</span>
+              <span class="tag-chip">AI/ML</span>
+            </div>
+          </div>
+
+          <!-- Pink Tax -->
+          <div class="project-card">
+            <div>
+              <div class="project-meta-top">
+                <span>Data Science</span>
+                <span>June 2026</span>
+              </div>
+              <h3 class="project-title">Pink Tax Data Visualization</h3>
+              <p class="project-desc">Built and deployed an interactive data visualization raising awareness toward gender price disparities in retail using SQL and Tableau.</p>
+            </div>
+            <div class="project-tags">
+              <span class="tag-chip">SQL</span>
+              <span class="tag-chip">Tableau</span>
+              <span class="tag-chip">Data Analytics</span>
+            </div>
+          </div>
+
+          <!-- EmpowHER -->
+          <div class="project-card">
+            <div>
+              <div class="project-meta-top">
+                <span>501(c)(3) Nonprofit</span>
+                <span>June 2024 — Present</span>
+              </div>
+              <h3 class="project-title">EmpowHER Digital Outreach</h3>
+              <p class="project-desc">Scaled digital presence for a non-profit mitigating period poverty for refugees. Reached 11k+ accounts, raised $1,000+ in donations, and distributed 600+ care products.</p>
+            </div>
+            <div class="project-tags">
+              <span class="tag-chip">Nonprofit Leadership</span>
+              <span class="tag-chip">Social Impact</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-flex">
+      <span>© 2026 Bhavna Patur. All rights reserved.</span>
+      <a href="mailto:paturbhavna@gmail.com" style="border-bottom: 1px solid var(--text-muted);">paturbhavna@gmail.com</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

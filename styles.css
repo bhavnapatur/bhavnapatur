@@ -918,3 +918,369 @@
     font-style: italic;
     font-weight: 400;
   }
+
+
+/* ========================================================================== 
+   Unified Light / Dark Theme System
+   The variables below connect the original component styles to one palette.
+   ========================================================================== */
+:root {
+  color-scheme: light;
+
+  /* Main editorial palette */
+  --paper: #f1eee7;
+  --surface: #e7e2d8;
+  --ink: #171613;
+  --muted: #716d64;
+  --line: rgba(23, 22, 19, 0.20);
+  --accent: #8c4938;
+  --header-bg: rgba(241, 238, 231, 0.94);
+  --dark-section: #171613;
+  --dark-text: #f1eee7;
+  --dark-muted: #c4bdb2;
+
+  /* Compatibility aliases used by the original CSS */
+  --bg-primary: var(--paper);
+  --bg-secondary: var(--surface);
+  --bg-card: #ffffff;
+  --text-primary: var(--ink);
+  --text-muted: var(--muted);
+  --border-color: var(--line);
+  --accent-color: var(--accent);
+  --accent-hover: var(--accent);
+  --text-color: var(--ink);
+  --text-main: var(--ink);
+  --badge-bg: var(--surface);
+  --badge-text: var(--ink);
+  --chip-bg: var(--surface);
+  --pill-bg: var(--surface);
+  --pill-text: var(--ink);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --paper: #171715;
+  --surface: #22221f;
+  --ink: #f2eee6;
+  --muted: #c0b9ad;
+  --line: rgba(242, 238, 230, 0.22);
+  --accent: #d8a18d;
+  --header-bg: rgba(23, 23, 21, 0.95);
+  --dark-section: #10100f;
+  --dark-text: #f2eee6;
+  --dark-muted: #c4bdb2;
+
+  /* Override the original component variables in dark mode too */
+  --bg-primary: var(--paper);
+  --bg-secondary: var(--surface);
+  --bg-card: #22221f;
+  --text-primary: var(--ink);
+  --text-muted: var(--muted);
+  --border-color: var(--line);
+  --accent-color: var(--accent);
+  --accent-hover: #e4b5a4;
+  --text-color: var(--ink);
+  --text-main: var(--ink);
+  --badge-bg: #292824;
+  --badge-text: var(--ink);
+  --chip-bg: #292824;
+  --pill-bg: #292824;
+  --pill-text: var(--ink);
+}
+
+html {
+  background: var(--paper);
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header and navigation */
+header {
+  background-color: var(--header-bg);
+  border-color: var(--border-color);
+}
+
+.site-header {
+  background: var(--header-bg);
+  border-color: var(--line);
+}
+
+.nav-link:hover,
+.nav-link.active,
+.nav-link.active::after {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+.nav-links {
+  color: var(--text-primary);
+}
+
+.nav-links.mobile-open {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+/* Text elements and secondary copy */
+.editorial-label,
+.nav-link,
+.hero-bio,
+.hero-tagline,
+.project-meta-top,
+.project-desc,
+.timeline-period,
+.timeline-company,
+.timeline-bullets,
+.card-badge,
+.contact-info p,
+.form-group label,
+footer,
+.grade-years,
+.exp-intro-text,
+.exp-company,
+.tenure-length,
+.sub-role-date,
+.pulse-status,
+.coming-soon-hero-title {
+  color: var(--text-muted);
+}
+
+.eyebrow,
+.mono,
+.hero-index,
+.scroll-cue,
+.nav a,
+.ism-pinned {
+  color: var(--ink);
+}
+
+.small-copy,
+.feature-copy p,
+.card-copy p,
+.journey-card p,
+.about-body,
+.ism-definition,
+.notes-grid .note {
+  color: var(--muted);
+}
+
+.grade-course-list li,
+.exp-bullets,
+.coming-soon-hero-title,
+.form-control {
+  color: var(--text-primary);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+/* Theme-aware cards, panels, tags, and research placeholders */
+.project-card,
+.info-card,
+.grade-card,
+.exp-card,
+.coming-soon-wrapper,
+.modal-container {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.tag-chip,
+.exp-tenure-badge {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.pale-art,
+.magazine-art {
+  background: var(--surface);
+}
+
+.journey-card {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.journey-grid {
+  background: var(--line);
+  border-color: var(--line);
+}
+
+.manifesto-text span,
+.section-heading h2 em,
+.contact-inner h2 em,
+.ism-hero-title h1 span,
+.question-text em {
+  color: var(--muted);
+}
+
+/* Keep ISM feature sections deliberately darker than the page */
+.ism-section,
+.ism-introduction,
+.final-project {
+  background: var(--dark-section);
+  color: var(--dark-text);
+}
+
+.ism-introduction-copy p,
+.ism-card .mono,
+.ism-section .ism-topline,
+.ism-section .ism-bottomline,
+.coming-soon {
+  color: var(--dark-muted);
+}
+
+/* Borders and dividers */
+hr,
+.site-header,
+.feature-meta,
+.card-copy,
+.text-feature,
+.about-list div,
+.notes-grid,
+.note + .note,
+.journey,
+.research-question,
+.process-card,
+.timeline-item,
+.grade-card-header,
+.exp-card-header,
+.sub-role-item {
+  border-color: var(--border-color);
+}
+
+/* Buttons, forms, and interactive states */
+button,
+input,
+textarea,
+select {
+  color: var(--text-primary);
+}
+
+.theme-toggle {
+  color: var(--text-primary);
+}
+
+.btn-submit {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.btn-submit:hover {
+  opacity: 0.88;
+}
+
+.form-control:focus {
+  border-color: var(--text-primary);
+}
+
+a,
+button {
+  transition: color 0.25s ease, background-color 0.25s ease,
+    border-color 0.25s ease, opacity 0.25s ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+.live-dot {
+  background: var(--accent);
+}
+
+.profile-link:hover,
+.contact-link:hover {
+  color: var(--accent);
+}
+
+/* Grade badges */
+.active-badge,
+.completed-badge {
+  background: var(--surface);
+  color: var(--accent);
+  border: 1px solid var(--border-color);
+}
+
+/* Card hover effects */
+.project-card:hover,
+.grade-card:hover,
+.exp-card:hover {
+  border-color: var(--border-color);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+/* Dark-mode editorial artwork */
+[data-theme="dark"] .photo-frame {
+  background: #302e29;
+}
+
+[data-theme="dark"] .editorial-placeholder {
+  color: #e3dcd0;
+}
+
+[data-theme="dark"] .pale-art {
+  background: #292925;
+}
+
+[data-theme="dark"] .magazine-art {
+  background: #37342f;
+}
+
+/* These mockups intentionally stay light for editorial contrast.
+   Remove this block if you want them to become dark as well. */
+[data-theme="dark"] .mini-cover,
+[data-theme="dark"] .phone-shell,
+[data-theme="dark"] .phone-screen {
+  background: #eeeadf;
+  color: #171613;
+}
+
+[data-theme="dark"] .recipe-chip {
+  color: #171613;
+  border-color: #171613;
+}
+
+/* Notebook section */
+[data-theme="dark"] .field-notes {
+  background: #292824;
+  color: var(--ink);
+}
+
+[data-theme="dark"] .field-notes .ism-section-label,
+[data-theme="dark"] .research-note .date,
+[data-theme="dark"] .research-note .type {
+  color: #d0c8bc;
+}
+
+/* Reduce animation for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
